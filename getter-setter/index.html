@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getter setter</title>
+</head>
+<body>
+<script type="text/javascript">
+var testName = 'im here';
+function Field(val){
+    this.value = val;
+    this.username = 'demo';
+}
+ 
+Field.prototype = {
+    get value(){
+        return this._value;
+    },
+    set value(val){
+        this._value = val;
+    },
+    get username(){
+        return this._username;
+    },
+    set username(val){
+        this._username = val;
+    }
+};
+
+var field = new Field("test");
+console.log(field.value);
+field.value = "test2";
+console.log(field.value);
+console.log(field.username);
+field.username = 'n00b';
+console.log(field.username);
+
+</script>
+
+</body>
+</html>
