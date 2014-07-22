@@ -9,7 +9,7 @@ define(function () {
 				cache[id] = [];
 			}
 
-			for (var i = 0; var il = cache.length; i < il; i++) {
+			for (var i = 0, il = cache.length; i < il; i++) {
 				cache[id][i].apply(null, args);
 			};
 			
@@ -22,4 +22,4 @@ define(function () {
 			}
 		}
 	}
-})
+});
