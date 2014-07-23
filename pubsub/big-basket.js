@@ -3,7 +3,7 @@ define(['./pubsub', 'jquery'], function (pubsub, $) {
     pubsub.sub('add-to-cart', function (item) {
         count++;
 
-        cart.find('h1').html(count);
+        cart.find('h2 sub').html(count);
 
         var li = $('<li />')
             .html(item.name)
@@ -15,7 +15,7 @@ define(['./pubsub', 'jquery'], function (pubsub, $) {
     pubsub.sub('remove-from-cart', function (item) {
         count--;
 
-        cart.find('h1').html(count);
+        cart.find('h2 sub').html(count);
 
         cart.find('li').filter(function () {
             return $(this).data('key') == item.id;
