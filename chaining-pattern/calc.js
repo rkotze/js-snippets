@@ -1,20 +1,21 @@
 var Calc = function (start) {
-	var self = this;
+	var self = this,
+	value = start;
 
 	this.add = function (x) {
-		start = start + x;
+		value = value + x;
 
 		return self;
 	};
 
 	this.multiply = function (x) {
-		start = start * x;
+		value = value * x;
 
 		return self;
 	};
 
 	this.equals = function (callback) {
-		callback(start);
+		callback(value);
 
 		return self;
 	};
